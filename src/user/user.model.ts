@@ -14,6 +14,9 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  mobileNumber: {
+    type: String,
+  },
   createdAt: {
     type: Date,
     default: Date.now,
@@ -31,3 +34,5 @@ userSchema.index(
 );
 
 export const UserModel = mongoose.model("user", userSchema, "user");
+
+
